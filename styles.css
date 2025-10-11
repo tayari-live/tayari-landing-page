@@ -1,0 +1,78 @@
+:root {
+  --primary: #FF6B35;
+  --primary-dark: #E85A2C;
+  --secondary: #2563EB;
+  --success: #10b981;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: calc(100vh - 80px);
+}
+
+.language-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 4/3;
+  max-height: 200px;
+}
+
+.language-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .7) 100%);
+  z-index: 1;
+}
+
+.language-card .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 2;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.step-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.step-number {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  box-shadow: 0 10px 30px rgba(255, 107, 53, .3);
+}
+
+.step-icon {
+  width: 100px;
+  height: 100px;
+  font-size: 3rem;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border: none;
+}
