@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TAYARI Swahili Camp 2025</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--tayari-pink:#E91E8C;--tayari-orange:#FF6B35;--tayari-yellow:#FFC107;--tayari-green:#8BC34A;--tayari-blue:#2196F3;--tayari-cyan:#00BCD4;--dark:#000;--light-bg:#F5F5F5}
+*{font-family:'Inter',sans-serif}
+body{background:#fff;overflow-x:hidden}
+.hero-section{background:url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80') center/cover no-repeat;position:relative;min-height:100vh}
+.hero-overlay{background:rgba(0,0,0,0.4);position:absolute;inset:0}
+.colorful-text{background:linear-gradient(135deg,var(--tayari-pink),var(--tayari-orange),var(--tayari-yellow),var(--tayari-green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-bg-pink{background:linear-gradient(135deg,#FFE5F4,#FFF0F8)}
+.section-bg-yellow{background:linear-gradient(135deg,#FFF9E5,#FFFDF0)}
+.section-bg-blue{background:linear-gradient(135deg,#E3F2FD,#F0F7FF)}
+.btn-pink{background:var(--tayari-pink);color:white;border:none}
+.btn-pink:hover{background:#C91A7A;color:white}
+.btn-orange{background:var(--tayari-orange);color:white;border:none}
+.btn-orange:hover{background:#E55A2A;color:white}
+.btn-green{background:var(--tayari-green);color:white;border:none}
+.btn-green:hover{background:#7CB342;color:white}
+.btn-blue{background:var(--tayari-blue);color:white;border:none}
+.btn-blue:hover{background:#1976D2;color:white}
+.btn-orangered{background:orangered;color:white;border:none}
+.btn-orangered:hover{background:#ff4500;color:white}
+.card-feature{border:none;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,0.1);transition:transform 0.3s}
+.card-feature:hover{transform:translateY(-5px)}
+.icon-circle-green{background:var(--tayari-green);color:white;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto}
+.icon-tree{background:var(--dark);color:white;width:100px;height:0;border-left:50px solid transparent;border-right:50px solid transparent;border-bottom:86px solid var(--dark);position:relative;margin:0 auto}
+.icon-tree::after{content:'';position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:20px;height:20px;background:var(--dark)}
+.price-card{border-radius:20px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.15)}
+.price-card-dark{background:#000;color:white}
+.price-card-cyan{background:var(--tayari-cyan);color:#000}
+.wave-decoration{position:absolute;bottom:0;left:0;width:100%;height:150px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%232196F3' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;background-size:cover}
+.forest-silhouette{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;background-size:cover}
+.sun-decoration{width:80px;height:80px;background:var(--tayari-yellow);border-radius:50%;position:relative}
+.sun-decoration::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;background:radial-gradient(circle,transparent 40%,var(--tayari-yellow) 40%,var(--tayari-yellow) 42%,transparent 42%);clip-path:polygon(50% 0%,60% 35%,95% 35%,65% 57%,80% 90%,50% 70%,20% 90%,35% 57%,5% 35%,40% 35%)}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+<div class="container py-2">
+<a class="navbar-brand fw-bold" href="#"><img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png" height="40" alt="TAYARI"></a>
+<button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto align-items-lg-center gap-3">
+<li class="nav-item"><a class="nav-link fw-semibold text-dark" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link fw-semibold text-dark" href="#registration">Registration</a></li>
+<li class="nav-item"><a class="nav-link fw-semibold text-dark" href="#info">Need more info?</a></li>
+<li class="nav-item"><a class="nav-link fw-semibold text-dark" href="#pricing">Camp Pricing</a></li>
+<li class="nav-item ms-lg-3"><a href="registration.html" class="btn btn-orangered rounded-pill px-4 py-2 fw-bold text-white">Register Now →</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<section id="home" class="hero-section d-flex align-items-center position-relative">
+<div class="hero-overlay"></div>
+<div class="container text-center text-white position-relative" style="z-index:2">
+<h1 class="display-1 fw-black mb-3">SWAHILI Camp</h1>
+<p class="display-5 fw-semibold mb-5">Bring Fun <span class="colorful-text fw-black">2</span> Life!</p>
+</div>
+</section>
+
+<section class="py-5 bg-white">
+<div class="container py-5">
+<div class="text-center mb-5">
+<div class="d-inline-block px-4 py-2 mb-3" style="background:var(--light-bg);border-radius:50px">
+<span style="font-size:2rem">📅</span>
+</div>
+<h2 class="display-5 fw-black mb-3">Upcoming Dates (5 Days / 4 Nights):</h2>
+<p class="fs-4"><strong>* November 30th - December 4th, 2025</strong></p>
+<p class="fs-4">* August 2026 (Dates to be advised)</p>
+<p class="fs-5 mt-4"><strong>VENUE:</strong> <em>Diani, Ukunda, Kenya</em></p>
+<p class="fs-5"><strong>AGES:</strong> 7 - <em>16 years</em></p>
+</div>
+</div>
+</section>
+
+<section class="py-5 section-bg-pink">
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-black mb-4" style="color:var(--tayari-green)">WHY JOIN?</h2>
+<p class="lead fs-5">Get your kids fluent in Swahili, through fun and games.</p>
+</div>
+<div class="row g-5">
+<div class="col-md-3">
+<div class="text-center">
+<div class="icon-circle-green mb-4">
+<i class="fas fa-utensils"></i>
+</div>
+<h4 class="fw-bold mb-3">Delicious meals</h4>
+<p>Not only will kids learn the culture, they will eat delicious freshly made Swahili meals, and learn what to call them too!</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="text-center">
+<div class="icon-tree mb-4"></div>
+<h4 class="fw-bold mb-3 mt-4">Fun programmes</h4>
+<p>Our motto is: "Why not have fun while learning." Just wait and see how much fun your kids will have!</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="text-center">
+<div class="icon-circle-green mb-4">
+<i class="fas fa-user"></i>
+</div>
+<h4 class="fw-bold mb-3">Great teachers</h4>
+<p>Professionally trained teachers with years of experience. We teach using TPR and engage kids on their level.</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="text-center">
+<div style="width:100px;height:100px;margin:0 auto;background:var(--dark);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);display:flex;align-items:center;justify-content:center" class="mb-4">
+<i class="fas fa-gamepad text-white" style="font-size:2.5rem"></i>
+</div>
+<h4 class="fw-bold mb-3">Educational games</h4>
+<p>In-person games are included with the camp, from beach volleyball to soapy tug-of-war. Our companion web app for ongoing learning available, get a discounted annual subscription when you register for the camp.</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-5">
+<div class="d-flex flex-wrap gap-3 justify-content-center">
+<a href="#video" class="btn btn-pink btn-lg rounded-pill px-5 py-3 fw-bold">WATCH VIDEO</a>
+<a href="#details" class="btn btn-orange btn-lg rounded-pill px-5 py-3 fw-bold">EVENT DETAILS</a>
+<a href="#pricing" class="btn btn-blue btn-lg rounded-pill px-5 py-3 fw-bold">CAMP PRICES</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="video" class="py-5 bg-white">
+<div class="container py-5">
+<div class="text-center mb-5">
+<div class="sun-decoration mx-auto mb-4"></div>
+<h2 class="display-4 fw-black mb-3" style="color:var(--tayari-pink)">WATCH OUR PREVIOUS EVENTS</h2>
+<p class="lead">See it through the eyes of our previous participants</p>
+</div>
+<div class="row g-4">
+<div class="col-lg-6">
+<div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
+<iframe src="https://www.youtube.com/embed/FiKTZayXFyQ" title="Swahili Camp for Kids" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
+<iframe src="https://www.youtube.com/embed/Tt3KRMKIyq4" title="Camp Introduction" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-5 section-bg-pink">
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-black mb-3" style="color:var(--tayari-pink)">GALLERY</h2>
+<p class="lead">An array of fun filled activities to aid the learning experience.</p>
+</div>
+<div class="row g-4">
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1533035336122-611141f8d4c5?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
+</div>
+</div>
+</section>
+
+<section id="details" class="py-5 section-bg-yellow position-relative">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-black mb-3">EVENTS SCHEDULE</h2>
+      <p class="lead">A sneak peek into what your kids will be up to..</p>
+    </div>
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-4">
+        <div class="card card-feature p-4 h-100">
+          <h3 class="fw-bold mb-4" style="color: var(--tayari-orange)">DAILY SCHEDULE</h3>
+          <p class="mb-4">Every day will include hours of fun learning through song, dance and games. More than that, as an <strong>immersion camp</strong> the kids will hear and speak in simple Swahili with prompts from the counselors. They will be fluent in no time.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card card-feature p-4 h-100 text-center">
+          <img src="https://images.unsplash.com/photo-1533035336122-611141f8d4c5?w=600&q=80" class="img-fluid rounded-3 mb-3" alt="Schedule">
+          <div class="text-start">
+            <ul class="list-unstyled">
+              <li class="mb-3"><strong>07:30 - 08:00 AM</strong> - Freshen Up</li>
+              <li class="mb-3"><strong>08:00 - 09:00 AM</strong> - Breakfast</li>
+              <li class="mb-3"><strong>09:00 - 09:30 AM</strong> - Indoor Icebreaker</li>
+              <li class="mb-3"><strong>09:30 - 10:30 AM</strong> - Language class (45min) & Activity (15min)</li>
+              <li class="mb-3"><strong>10:30 - 11:00 AM</strong> - Morning Snack</li>
+              <li class="mb-3"><strong>11:00 - 12:30 PM</strong> - Outdoor Language class (45min) & Activity (45min)</li>
+              <li class="mb-3"><strong>12:30 - 01:30 PM</strong> - Lunch</li>
+              <li class="mb-3"><strong>01:30 - 03:00 PM</strong> - Free / Rest Time</li>
+              <li class="mb-3"><strong>03:00 - 03:30 PM</strong> - Afternoon Snack</li>
+              <li class="mb-3"><strong>03:30 - 05:30 PM</strong> - Afternoon outdoor activity (excursion / Beach visit)</li>
+              <li class="mb-3"><strong>05:30 - 06:30 PM</strong> - Shower time</li>
+              <li class="mb-3"><strong>06:30 - 07:30 PM</strong> - Dinner</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card card-feature p-4 h-100" style="background: var(--tayari-blue); color: white">
+          <h3 class="fw-bold mb-4">LEARNING WITH FUN - A SAMPLE OF THE ACTIVITIES</h3>
+          <ul class="list-unstyled">
+            <li class="mb-3"><strong>09:30 AM</strong> - Charades in Swahili, called "Tenda"</li>
+            <li class="mb-3"><strong>11:00 AM</strong> - Capture the flag in Swahili</li>
+            <li class="mb-3"><strong>12:30 PM</strong> - Lunch with Swahili names</li>
+            <li class="mb-3"><strong>03:30 PM</strong> - Outdoor sports / Beach Volleyball in Swahili</li>
+            <li class="mb-3"><strong>06:00 PM</strong> - Kids movie with Swahili dub</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="py-5 position-relative" style="background:var(--tayari-blue)">
+<div class="wave-decoration"></div>
+<div class="container py-5 position-relative" style="z-index:2">
+<div class="text-center mb-5 text-white">
+<h2 class="display-3 fw-black mb-3">CAMP PRICES</h2>
+<p class="display-6 fw-semibold">GET OUR GREAT OFFERS!</p>
+</div>
+<div class="row g-4 justify-content-center">
+<div class="col-lg-5">
+<div class="price-card price-card-dark">
+<div class="p-5 text-center">
+<div class="mb-4">
+<div class="text-decoration-line-through" style="font-size:3rem">$450</div>
+<div class="display-1 fw-black" style="color:#FF0000">$390</div>
+<p class="fs-5">for 5-day residential camp</p>
+</div>
+</div>
+<div class="p-5" style="background:var(--tayari-cyan);color:#000">
+<h4 class="fw-bold mb-4">Your Value Proposition</h4>
+<div class="mb-3"><i class="fas fa-check-circle me-3"></i><strong>FULL BOARD ACCOMMODATION</strong></div>
+<div class="mb-3"><i class="fas fa-check-circle me-3"></i><strong>ALL FUN ACTIVITIES</strong></div>
+<div class="mb-4"><i class="fas fa-check-circle me-3"></i><strong>LANGUAGE LESSONS</strong></div>
+<div class="text-center mt-4">
+<a href="registration.html" class="btn btn-orangered btn-lg rounded-pill px-5 py-3 fw-bold">BOOK FULL CAMP</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="price-card">
+<div class="p-5 text-center price-card-cyan">
+<div class="mb-4">
+<div class="text-decoration-line-through" style="font-size:3rem">$270</div>
+<div class="display-1 fw-black" style="color:#FF0000">$190</div>
+<p class="fs-5">for 5-day non-residential camp</p>
+</div>
+</div>
+<div class="p-5 price-card-dark">
+<h4 class="fw-bold mb-4">Your Value Proposition</h4>
+<div class="mb-3"><i class="fas fa-check-circle me-3"></i><strong>LUNCH AND SNACKS</strong></div>
+<div class="mb-3"><i class="fas fa-check-circle me-3"></i><strong>ALL FUN ACTIVITIES</strong></div>
+<div class="mb-4"><i class="fas fa-check-circle me-3"></i><strong>LANGUAGE LESSONS</strong></div>
+<div class="text-center mt-4">
+<a href="registration.html" class="btn btn-orangered btn-lg rounded-pill px-5 py-3 fw-bold">BOOK DAY CAMP</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-5 section-bg-pink">
+<div class="container py-5">
+<div class="text-center mb-5">
+<div class="sun-decoration mx-auto mb-4"></div>
+<h2 class="display-4 fw-black mb-3" style="color:var(--tayari-pink)">WHAT PARENTS SAY</h2>
+<p class="lead">See it through the eyes of our previous participants</p>
+</div>
+<div class="row g-4">
+<div class="col-lg-6">
+<div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
+<iframe src="https://www.youtube.com/embed/jkEi0JIRclg" title="Parent Testimonial 1" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
+<iframe src="https://www.youtube.com/embed/H5ekuBb76KU" title="Parent Testimonial 2" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="info" class="py-5 position-relative" style="background:var(--tayari-blue);color:white">
+<div class="forest-silhouette"></div>
+<div class="container py-5 position-relative" style="z-index:2">
+<div class="text-center mb-5">
+<h2 class="display-5 fw-black mb-4">NEED MORE INFO?</h2>
+<p class="fs-5">REQUEST A CALL BACK BY FILLING IN YOUR INFORMATION BELOW AND WE WILL GET RIGHT BACK TO YOU...</p>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<div class="card border-0 shadow-lg rounded-4">
+<div class="card-body p-5">
+<form>
+<div class="row g-4">
+<div class="col-md-6">
+<label class="form-label fw-semibold">Your first name *</label>
+<input type="text" class="form-control form-control-lg" required>
+</div>
+<div class="col-md-6">
+<label class="form-label fw-semibold">Last Name</label>
+<input type="text" class="form-control form-control-lg">
+</div>
+<div class="col-12">
+<label class="form-label fw-semibold">Email *</label>
+<input type="email" class="form-control form-control-lg" required>
+</div>
+<div class="col-12">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="agree">
+<label class="form-check-label" for="agree">
+I agree to receive commercial information from Tayari.live [*read more]
+</label>
+</div>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-green btn-lg w-100 rounded-pill fw-bold py-3">REQUEST A CALL BACK</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-5 text-white" style="background: linear-gradient(135deg, var(--tayari-blue), var(--tayari-green))">
+<div class="container py-5 text-center">
+<h2 class="display-4 fw-black mb-4">Ready for the Adventure?</h2>
+<p class="lead fs-4 mb-5">Secure your child's spot at Swahili Camp today!</p>
+<a href="registration.html" class="btn btn-orangered btn-lg rounded-pill px-5 py-3 fw-bold">Register Now →</a>
+</div>
+</section>
+
+<footer class="py-5 bg-dark text-white">
+<div class="container py-4">
+<div class="row g-4">
+<div class="col-lg-4">
+<h5 class="fw-bold mb-3" style="color:var(--tayari-orange)">Contact Us</h5>
+<p class="text-white-50 small mb-2"><i class="fas fa-envelope me-2"></i>info@tayari.live</p>
+<p class="text-white-50 small mb-2"><i class="fas fa-phone me-2"></i>+254 715 349 834</p>
+<p class="text-white-50 small"><i class="fas fa-map-marker-alt me-2"></i>Diani, Ukunda, Kenya</p>
+</div>
+<div class="col-lg-4">
+<h5 class="fw-bold mb-3">Quick Links</h5>
+<ul class="list-unstyled">
+<li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none small">Home</a></li>
+<li class="mb-2"><a href="#registration" class="text-white-50 text-decoration-none small">Registration</a></li>
+<li class="mb-2"><a href="#info" class="text-white-50 text-decoration-none small">Need more info?</a></li>
+<li class="mb-2"><a href="#pricing" class="text-white-50 text-decoration-none small">Camp Pricing</a></li>
+</ul>
+</div>
+<div class="col-lg-4">
+<h5 class="fw-bold mb-3">Follow Us</h5>
+<div class="d-flex gap-3">
+<a href="#" class="text-white-50"><i class="fab fa-facebook-f fa-lg"></i></a>
+<a href="#" class="text-white-50"><i class="fab fa-instagram fa-lg"></i></a>
+<a href="#" class="text-white-50"><i class="fab fa-twitter fa-lg"></i></a>
+<a href="#" class="text-white-50"><i class="fab fa-youtube fa-lg"></i></a>
+<a href="#" class="text-white-50"><i class="fab fa-tiktok fa-lg"></i></a>
+<a href="#" class="text-white-50"><i class="fab fa-x-twitter fa-lg"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-4 opacity-25">
+<p class="text-center text-white-50 small mb-0">© 2025 TAYARI.live. All rights reserved.</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+a.addEventListener('click', e => {
+e.preventDefault();
+const target = document.querySelector(a.getAttribute('href'));
+if (target) {
+target.scrollIntoView({ behavior: 'smooth' });
+bootstrap.Collapse.getInstance(document.getElementById('nav'))?.hide();
+}
+});
+});
+</script>
+</body>
+</html>
