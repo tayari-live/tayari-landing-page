@@ -1,402 +1,775 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>TAYARI Swahili Camp 2025</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-:root{--tayari-pink:#E91E8C;--tayari-orange:#FF6B35;--tayari-yellow:#FFC107;--tayari-green:#8BC34A;--tayari-blue:#2196F3;--tayari-cyan:#00BCD4;--dark:#000;--light-bg:#F5F5F5}
-*{font-family:'Inter',sans-serif}
-body{background:#fff;overflow-x:hidden}
-.hero-section{background:url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80') center/cover no-repeat;position:relative;min-height:100vh}
-.hero-overlay{background:rgba(0,0,0,0.4);position:absolute;inset:0}
-.colorful-text{background:linear-gradient(135deg,var(--tayari-pink),var(--tayari-orange),var(--tayari-yellow),var(--tayari-green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.section-bg-pink{background:linear-gradient(135deg,#FFE5F4,#FFF0F8)}
-.section-bg-yellow{background:linear-gradient(135deg,#FFF9E5,#FFFDF0)}
-.section-bg-blue{background:linear-gradient(135deg,#E3F2FD,#F0F7FF)}
-.btn-pink{background:var(--tayari-pink);color:white;border:none}
-.btn-pink:hover{background:#C91A7A;color:white}
-.btn-orange{background:var(--tayari-orange);color:white;border:none}
-.btn-orange:hover{background:#E55A2A;color:white}
-.btn-green{background:var(--tayari-green);color:white;border:none}
-.btn-green:hover{background:#7CB342;color:white}
-.btn-blue{background:var(--tayari-blue);color:white;border:none}
-.btn-blue:hover{background:#1976D2;color:white}
-.btn-orangered{background:orangered;color:white;border:none}
-.btn-orangered:hover{background:#ff4500;color:white}
-.card-feature{border:none;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,0.1);transition:transform 0.3s}
-.card-feature:hover{transform:translateY(-5px)}
-.icon-circle-green{background:var(--tayari-green);color:white;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto}
-.icon-tree{background:var(--dark);color:white;width:100px;height:0;border-left:50px solid transparent;border-right:50px solid transparent;border-bottom:86px solid var(--dark);position:relative;margin:0 auto}
-.icon-tree::after{content:'';position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:20px;height:20px;background:var(--dark)}
-.price-card{border-radius:20px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.15)}
-.price-card-dark{background:#000;color:white}
-.price-card-cyan{background:var(--tayari-cyan);color:#000}
-.wave-decoration{position:absolute;bottom:0;left:0;width:100%;height:150px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%232196F3' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;background-size:cover}
-.forest-silhouette{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;background-size:cover}
-.sun-decoration{width:80px;height:80px;background:var(--tayari-yellow);border-radius:50%;position:relative}
-.sun-decoration::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;background:radial-gradient(circle,transparent 40%,var(--tayari-yellow) 40%,var(--tayari-yellow) 42%,transparent 42%);clip-path:polygon(50% 0%,60% 35%,95% 35%,65% 57%,80% 90%,50% 70%,20% 90%,35% 57%,5% 35%,40% 35%)}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Start Your Swahili Journey | Tayari</title>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+  <script>
+    window.vercelAnalytics = window.vercelAnalytics || [];
+    vercelAnalytics.push({
+      projectId: "prj_i2NDm6oweUkz7x3Ijc17MiP5HXTL"
+    });
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVV3MX64H6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YVV3MX64H6');
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png">
+  
+  <style>
+    :root {
+      --brand-pink: #d72a58;
+      --brand-purple: #932390;
+      --brand-green: #8ec83d;
+      --brand-blue: #0777bc;
+      --brand-yellow: #f19707;
+      --brand-orange: #f25925;
+      --dark: #0F172A;
+      --gray-700: #334155;
+      --gray-500: #64748b;
+      --gray-300: #cbd5e1;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--gray-700);
+      /* background: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-pink) 50%, var(--brand-orange) 100%); */
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .page-wrapper {
+        padding: 1rem;
+        align-items: flex-start;
+      }
+    }
+
+    .signup-container {
+      background: var(--white);
+      border-radius: 30px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+      max-width: 1100px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      animation: slideUp 0.6s ease;
+      position: relative;
+    }
+
+    @media (max-width: 968px) {
+      .signup-container {
+        grid-template-columns: 1fr;
+        border-radius: 24px;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Left Side - Branding */
+    .branding-side {
+      /* background: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-pink) 100%); */
+      background: linear-gradient(135deg, var(--brand-blue) 0%, royalblue 100%);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      gap: 20px;
+    }
+
+    @media (max-width: 968px) {
+      .branding-side {
+        padding: 2.5rem 2rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .branding-side {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    /* Decorative circles */
+    .branding-side::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.15), transparent);
+      border-radius: 50%;
+      top: -100px;
+      right: -100px;
+    }
+
+    .branding-side::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(142,200,61,0.2), transparent);
+      border-radius: 50%;
+      bottom: -50px;
+      left: -50px;
+    }
+
+    .logo-section {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      max-width: 160px;
+      height: auto;
+    }
+
+    @media (max-width: 968px) {
+      .logo {
+        max-width: 140px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    .branding-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .branding-content h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 968px) {
+      .branding-content h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .branding-content h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    .branding-content p {
+      font-size: 1rem;
+      opacity: 0.95;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 968px) {
+      .features-list {
+        text-align: left;
+        max-width: 400px;
+        margin: 1.5rem auto 0;
+      }
+    }
+
+    .features-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.875rem;
+      font-size: 0.95rem;
+      opacity: 0.95;
+    }
+
+    .features-list li::before {
+      content: '✓';
+      width: 28px;
+      height: 28px;
+      background: var(--brand-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+      font-size: 0.875rem;
+    }
+
+    /* Right Side - Form */
+    .form-side {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-height: 100%;
+      overflow-y: auto;
+    }
+
+    @media (max-width: 968px) {
+      .form-side {
+        padding: 2.5rem 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-side {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    .form-header {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      .form-header {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .form-header h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 480px) {
+      .form-header h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .form-header p {
+      color: var(--gray-500);
+      font-size: 0.95rem;
+    }
+
+    .free-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--brand-blue), #3a79f8);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(142,200,61,0.3);
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .required {
+      color: var(--brand-pink);
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 0.875rem 1rem;
+      border: 2px solid var(--gray-300);
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      color: var(--dark);
+      transition: all 0.2s ease;
+      background: var(--white);
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--brand-blue);
+      box-shadow: 0 0 0 4px rgba(147, 35, 144, 0.1);
+    }
+
+    .form-group input::placeholder {
+      color: var(--gray-500);
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%2364748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+
+    .submit-button {
+      background: linear-gradient(135deg, var(--brand-yellow), var(--brand-orange));
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(142,200,61,0.3);
+    }
+
+    .submit-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .submit-button:hover::before {
+      left: 100%;
+    }
+
+    .submit-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(142,200,61,0.4);
+    }
+
+    .submit-button:active {
+      transform: translateY(0);
+    }
+
+    .submit-button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .signin-section {
+      margin-top: 1.5rem;
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--gray-300);
+    }
+
+    .signin-section p {
+      color: var(--gray-500);
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .signin-link {
+      color: var(--brand-blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .signin-link:hover {
+      color: var(--brand-pink);
+      text-decoration: underline;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeIn 0.3s ease;
+      padding: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 24px;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      animation: modalSlideUp 0.4s ease;
+    }
+
+    @media (max-width: 480px) {
+      .modal-content {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @keyframes modalSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-content .success-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--brand-green), #7ab82f);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 3rem;
+      box-shadow: 0 10px 25px rgba(142,200,61,0.3);
+    }
+
+    @media (max-width: 480px) {
+      .modal-content .success-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+      }
+    }
+
+    .modal-content h3 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .modal-content h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .modal-content p {
+      color: var(--gray-500);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .spinner {
+      margin: 2rem auto 0;
+      width: 40px;
+      height: 40px;
+      border: 4px solid var(--gray-300);
+      border-top-color: var(--brand-purple);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-<div class="container py-2">
-<a class="navbar-brand fw-bold" href="#"><img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png" height="40" alt="TAYARI"></a>
-<button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
-<div class="collapse navbar-collapse" id="nav">
-<ul class="navbar-nav ms-auto align-items-lg-center gap-3">
-<li class="nav-item"><a class="nav-link fw-semibold text-dark" href="#home">Home</a></li>
-<li class="nav-item"><a class="nav-link fw-semibold text-dark" href="#registration">Registration</a></li>
-<li class="nav-item"><a class="nav-link fw-semibold text-dark" href="#info">Need more info?</a></li>
-<li class="nav-item"><a class="nav-link fw-semibold text-dark" href="#pricing">Camp Pricing</a></li>
-<li class="nav-item ms-lg-3"><a href="registration.html" class="btn btn-orangered rounded-pill px-4 py-2 fw-bold text-white">Register Now →</a></li>
-</ul>
-</div>
-</div>
-</nav>
-
-<section id="home" class="hero-section d-flex align-items-center position-relative">
-<div class="hero-overlay"></div>
-<div class="container text-center text-white position-relative" style="z-index:2">
-<h1 class="display-1 fw-black mb-3">SWAHILI Camp</h1>
-<p class="display-5 fw-semibold mb-5">Bring Fun <span class="colorful-text fw-black">2</span> Life!</p>
-</div>
-</section>
-
-<section class="py-5 bg-white">
-<div class="container py-5">
-<div class="text-center mb-5">
-<div class="d-inline-block px-4 py-2 mb-3" style="background:var(--light-bg);border-radius:50px">
-<span style="font-size:2rem">📅</span>
-</div>
-<h2 class="display-5 fw-black mb-3">Upcoming Dates (5 Days / 4 Nights):</h2>
-<p class="fs-4"><strong>* November 30th - December 4th, 2025</strong></p>
-<p class="fs-4">* August 2026 (Dates to be advised)</p>
-<p class="fs-5 mt-4"><strong>VENUE:</strong> <em>Diani, Ukunda, Kenya</em></p>
-<p class="fs-5"><strong>AGES:</strong> 7 - <em>16 years</em></p>
-</div>
-</div>
-</section>
-
-<section class="py-5 section-bg-pink">
-<div class="container py-5">
-<div class="text-center mb-5">
-<h2 class="display-4 fw-black mb-4" style="color:var(--tayari-green)">WHY JOIN?</h2>
-<p class="lead fs-5">Get your kids fluent in Swahili, through fun and games.</p>
-</div>
-<div class="row g-5">
-<div class="col-md-3">
-<div class="text-center">
-<div class="icon-circle-green mb-4">
-<i class="fas fa-utensils"></i>
-</div>
-<h4 class="fw-bold mb-3">Delicious meals</h4>
-<p>Not only will kids learn the culture, they will eat delicious freshly made Swahili meals, and learn what to call them too!</p>
-</div>
-</div>
-<div class="col-md-3">
-<div class="text-center">
-<div class="icon-tree mb-4"></div>
-<h4 class="fw-bold mb-3 mt-4">Fun programmes</h4>
-<p>Our motto is: "Why not have fun while learning." Just wait and see how much fun your kids will have!</p>
-</div>
-</div>
-<div class="col-md-3">
-<div class="text-center">
-<div class="icon-circle-green mb-4">
-<i class="fas fa-user"></i>
-</div>
-<h4 class="fw-bold mb-3">Great teachers</h4>
-<p>Professionally trained teachers with years of experience. We teach using TPR and engage kids on their level.</p>
-</div>
-</div>
-<div class="col-md-3">
-<div class="text-center">
-<div style="width:100px;height:100px;margin:0 auto;background:var(--dark);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);display:flex;align-items:center;justify-content:center" class="mb-4">
-<i class="fas fa-gamepad text-white" style="font-size:2.5rem"></i>
-</div>
-<h4 class="fw-bold mb-3">Educational games</h4>
-<p>In-person games are included with the camp, from beach volleyball to soapy tug-of-war. Our companion web app for ongoing learning available, get a discounted annual subscription when you register for the camp.</p>
-</div>
-</div>
-</div>
-<div class="text-center mt-5">
-<div class="d-flex flex-wrap gap-3 justify-content-center">
-<a href="#video" class="btn btn-pink btn-lg rounded-pill px-5 py-3 fw-bold">WATCH VIDEO</a>
-<a href="#details" class="btn btn-orange btn-lg rounded-pill px-5 py-3 fw-bold">EVENT DETAILS</a>
-<a href="#pricing" class="btn btn-blue btn-lg rounded-pill px-5 py-3 fw-bold">CAMP PRICES</a>
-</div>
-</div>
-</div>
-</section>
-
-<section id="video" class="py-5 bg-white">
-<div class="container py-5">
-<div class="text-center mb-5">
-<div class="sun-decoration mx-auto mb-4"></div>
-<h2 class="display-4 fw-black mb-3" style="color:var(--tayari-pink)">WATCH OUR PREVIOUS EVENTS</h2>
-<p class="lead">See it through the eyes of our previous participants</p>
-</div>
-<div class="row g-4">
-<div class="col-lg-6">
-<div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
-<iframe src="https://www.youtube.com/embed/FiKTZayXFyQ" title="Swahili Camp for Kids" allowfullscreen class="border-0"></iframe>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
-<iframe src="https://www.youtube.com/embed/Tt3KRMKIyq4" title="Camp Introduction" allowfullscreen class="border-0"></iframe>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="py-5 section-bg-pink">
-<div class="container py-5">
-<div class="text-center mb-5">
-<h2 class="display-4 fw-black mb-3" style="color:var(--tayari-pink)">GALLERY</h2>
-<p class="lead">An array of fun filled activities to aid the learning experience.</p>
-</div>
-<div class="row g-4">
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1533035336122-611141f8d4c5?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
-<div class="col-md-4"><img src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?w=600&q=80" class="img-fluid rounded-3 w-100 shadow" alt="Camp Activity" style="height:300px;object-fit:cover"></div>
-</div>
-</div>
-</section>
-
-<section id="details" class="py-5 section-bg-yellow position-relative">
-  <div class="container py-5">
-    <div class="text-center mb-5">
-      <h2 class="display-4 fw-black mb-3">EVENTS SCHEDULE</h2>
-      <p class="lead">A sneak peek into what your kids will be up to..</p>
-    </div>
-    <div class="row g-5 align-items-start">
-      <div class="col-lg-4">
-        <div class="card card-feature p-4 h-100">
-          <h3 class="fw-bold mb-4" style="color: var(--tayari-orange)">DAILY SCHEDULE</h3>
-          <p class="mb-4">Every day will include hours of fun learning through song, dance and games. More than that, as an <strong>immersion camp</strong> the kids will hear and speak in simple Swahili with prompts from the counselors. They will be fluent in no time.</p>
+  <div class="page-wrapper">
+    <div class="signup-container">
+      <!-- Left Side - Branding -->
+      <div class="branding-side">
+        <div class="logo-section">
+          <img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png" alt="Tayari Logo" class="logo"/>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card card-feature p-4 h-100 text-center">
-          <img src="https://images.unsplash.com/photo-1533035336122-611141f8d4c5?w=600&q=80" class="img-fluid rounded-3 mb-3" alt="Schedule">
-          <div class="text-start">
-            <ul class="list-unstyled">
-              <li class="mb-3"><strong>07:30 - 08:00 AM</strong> - Freshen Up</li>
-              <li class="mb-3"><strong>08:00 - 09:00 AM</strong> - Breakfast</li>
-              <li class="mb-3"><strong>09:00 - 09:30 AM</strong> - Indoor Icebreaker</li>
-              <li class="mb-3"><strong>09:30 - 10:30 AM</strong> - Language class (45min) & Activity (15min)</li>
-              <li class="mb-3"><strong>10:30 - 11:00 AM</strong> - Morning Snack</li>
-              <li class="mb-3"><strong>11:00 - 12:30 PM</strong> - Outdoor Language class (45min) & Activity (45min)</li>
-              <li class="mb-3"><strong>12:30 - 01:30 PM</strong> - Lunch</li>
-              <li class="mb-3"><strong>01:30 - 03:00 PM</strong> - Free / Rest Time</li>
-              <li class="mb-3"><strong>03:00 - 03:30 PM</strong> - Afternoon Snack</li>
-              <li class="mb-3"><strong>03:30 - 05:30 PM</strong> - Afternoon outdoor activity (excursion / Beach visit)</li>
-              <li class="mb-3"><strong>05:30 - 06:30 PM</strong> - Shower time</li>
-              <li class="mb-3"><strong>06:30 - 07:30 PM</strong> - Dinner</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card card-feature p-4 h-100" style="background: var(--tayari-blue); color: white">
-          <h3 class="fw-bold mb-4">LEARNING WITH FUN - A SAMPLE OF THE ACTIVITIES</h3>
-          <ul class="list-unstyled">
-            <li class="mb-3"><strong>09:30 AM</strong> - Charades in Swahili, called "Tenda"</li>
-            <li class="mb-3"><strong>11:00 AM</strong> - Capture the flag in Swahili</li>
-            <li class="mb-3"><strong>12:30 PM</strong> - Lunch with Swahili names</li>
-            <li class="mb-3"><strong>03:30 PM</strong> - Outdoor sports / Beach Volleyball in Swahili</li>
-            <li class="mb-3"><strong>06:00 PM</strong> - Kids movie with Swahili dub</li>
+
+        <div class="branding-content">
+          <h1>Begin Your Swahili Journey Today</h1>
+          <p>Join thousands of learners mastering Swahili with our proven, interactive learning platform.</p>
+
+          <ul class="features-list">
+            <li>Interactive video lessons with native speakers</li>
+            <li>Personalized learning path for all levels</li>
+            <li>Cultural immersion and real-world practice</li>
+            <li>Track your progress and earn certificates</li>
           </ul>
+        </div>
+      </div>
+
+      <!-- Right Side - Form -->
+      <div class="form-side">
+        <div class="form-header">
+          <h2>Create Your Account <span class="free-badge">FREE</span></h2>
+          <p>Start learning Swahili in minutes. No credit card required.</p>
+        </div>
+
+        <form id="signup-form" class="signup-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name <span class="required">*</span></label>
+              <input id="first-name" name="first-name" type="text" required placeholder="John"/>
+            </div>
+
+            <div class="form-group">
+              <label for="last-name">Last Name <span class="required">*</span></label>
+              <input id="last-name" name="last-name" type="text" required placeholder="Doe"/>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input id="email" name="email" type="email" required placeholder="john.doe@example.com"/>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="gender">Gender <span class="required">*</span></label>
+              <select id="gender" name="gender" required>
+                <option value="">Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age <span class="required">*</span></label>
+              <select id="age" name="age" required>
+                <option value="">Select age</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="country">Country <span class="required">*</span></label>
+            <select id="country" name="country" required>
+              <option value="">Select your country</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-button">Start Learning Free →</button>
+        </form>
+
+        <div class="signin-section">
+          <p>Already have an account?</p>
+          <a href="https://app.tayari.live/courses" class="signin-link">Sign in to continue</a>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<section id="pricing" class="py-5 position-relative" style="background:var(--tayari-blue)">
-<div class="wave-decoration"></div>
-<div class="container py-5 position-relative" style="z-index:2">
-<div class="text-center mb-5 text-white">
-<h2 class="display-3 fw-black mb-3">CAMP PRICES</h2>
-<p class="display-6 fw-semibold">GET OUR GREAT OFFERS!</p>
-</div>
-<div class="row g-4 justify-content-center">
-<div class="col-lg-5">
-<div class="price-card price-card-dark">
-<div class="p-5 text-center">
-<div class="mb-4">
-<div class="text-decoration-line-through" style="font-size:3rem">$450</div>
-<div class="display-1 fw-black" style="color:#FF0000">$390</div>
-<p class="fs-5">for 5-day residential camp</p>
-</div>
-</div>
-<div class="p-5" style="background:var(--tayari-cyan);color:#000">
-<h4 class="fw-bold mb-4">Your Value Proposition</h4>
-<div class="mb-3"><i class="fas fa-check-circle me-3"></i><strong>FULL BOARD ACCOMMODATION</strong></div>
-<div class="mb-3"><i class="fas fa-check-circle me-3"></i><strong>ALL FUN ACTIVITIES</strong></div>
-<div class="mb-4"><i class="fas fa-check-circle me-3"></i><strong>LANGUAGE LESSONS</strong></div>
-<div class="text-center mt-4">
-<a href="registration.html" class="btn btn-orangered btn-lg rounded-pill px-5 py-3 fw-bold">BOOK FULL CAMP</a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-5">
-<div class="price-card">
-<div class="p-5 text-center price-card-cyan">
-<div class="mb-4">
-<div class="text-decoration-line-through" style="font-size:3rem">$270</div>
-<div class="display-1 fw-black" style="color:#FF0000">$190</div>
-<p class="fs-5">for 5-day non-residential camp</p>
-</div>
-</div>
-<div class="p-5 price-card-dark">
-<h4 class="fw-bold mb-4">Your Value Proposition</h4>
-<div class="mb-3"><i class="fas fa-check-circle me-3"></i><strong>LUNCH AND SNACKS</strong></div>
-<div class="mb-3"><i class="fas fa-check-circle me-3"></i><strong>ALL FUN ACTIVITIES</strong></div>
-<div class="mb-4"><i class="fas fa-check-circle me-3"></i><strong>LANGUAGE LESSONS</strong></div>
-<div class="text-center mt-4">
-<a href="registration.html" class="btn btn-orangered btn-lg rounded-pill px-5 py-3 fw-bold">BOOK DAY CAMP</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <script>
+    (function () {
+      const countries = [
+        "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
+        "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
+        "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Congo, Democratic Republic of the", "Costa Rica", "Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia",
+        "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+        "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia",
+        "Fiji", "Finland", "France",
+        "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana",
+        "Haiti", "Holy See (Vatican City)", "Honduras", "Hungary",
+        "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy",
+        "Jamaica", "Japan", "Jordan",
+        "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan",
+        "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
+        "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar",
+        "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway",
+        "Oman",
+        "Pakistan", "Palau", "Palestine, State of", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
+        "Qatar",
+        "Romania", "Russia", "Rwanda",
+        "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
+        "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Türkiye", "Turkmenistan", "Tuvalu",
+        "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan",
+        "Vanuatu", "Venezuela", "Vietnam",
+        "Yemen",
+        "Zambia", "Zimbabwe"
+      ];
 
-<section class="py-5 section-bg-pink">
-<div class="container py-5">
-<div class="text-center mb-5">
-<div class="sun-decoration mx-auto mb-4"></div>
-<h2 class="display-4 fw-black mb-3" style="color:var(--tayari-pink)">WHAT PARENTS SAY</h2>
-<p class="lead">See it through the eyes of our previous participants</p>
-</div>
-<div class="row g-4">
-<div class="col-lg-6">
-<div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
-<iframe src="https://www.youtube.com/embed/jkEi0JIRclg" title="Parent Testimonial 1" allowfullscreen class="border-0"></iframe>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
-<iframe src="https://www.youtube.com/embed/H5ekuBb76KU" title="Parent Testimonial 2" allowfullscreen class="border-0"></iframe>
-</div>
-</div>
-</div>
-</div>
-</section>
+      const countrySelect = document.getElementById("country");
+      countries.forEach(name => {
+        const opt = document.createElement("option");
+        opt.value = name;
+        opt.textContent = name;
+        countrySelect.appendChild(opt);
+      });
 
-<section id="info" class="py-5 position-relative" style="background:var(--tayari-blue);color:white">
-<div class="forest-silhouette"></div>
-<div class="container py-5 position-relative" style="z-index:2">
-<div class="text-center mb-5">
-<h2 class="display-5 fw-black mb-4">NEED MORE INFO?</h2>
-<p class="fs-5">REQUEST A CALL BACK BY FILLING IN YOUR INFORMATION BELOW AND WE WILL GET RIGHT BACK TO YOU...</p>
-</div>
-<div class="row justify-content-center">
-<div class="col-lg-8">
-<div class="card border-0 shadow-lg rounded-4">
-<div class="card-body p-5">
-<form>
-<div class="row g-4">
-<div class="col-md-6">
-<label class="form-label fw-semibold">Your first name *</label>
-<input type="text" class="form-control form-control-lg" required>
-</div>
-<div class="col-md-6">
-<label class="form-label fw-semibold">Last Name</label>
-<input type="text" class="form-control form-control-lg">
-</div>
-<div class="col-12">
-<label class="form-label fw-semibold">Email *</label>
-<input type="email" class="form-control form-control-lg" required>
-</div>
-<div class="col-12">
-<div class="form-check">
-<input class="form-check-input" type="checkbox" id="agree">
-<label class="form-check-label" for="agree">
-I agree to receive commercial information from Tayari.live [*read more]
-</label>
-</div>
-</div>
-<div class="col-12">
-<button type="submit" class="btn btn-green btn-lg w-100 rounded-pill fw-bold py-3">REQUEST A CALL BACK</button>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+      try {
+        const localeCountry = (navigator.language || '').split('-')[1] || '';
+        if (localeCountry) {
+          const matched = countries.find(c => c.toLowerCase() === localeCountry.toLowerCase());
+          if (matched) {
+            countrySelect.value = matched;
+          }
+        }
+      } catch (e) {}
 
-<section class="py-5 text-white" style="background: linear-gradient(135deg, var(--tayari-blue), var(--tayari-green))">
-<div class="container py-5 text-center">
-<h2 class="display-4 fw-black mb-4">Ready for the Adventure?</h2>
-<p class="lead fs-4 mb-5">Secure your child's spot at Swahili Camp today!</p>
-<a href="registration.html" class="btn btn-orangered btn-lg rounded-pill px-5 py-3 fw-bold">Register Now →</a>
-</div>
-</section>
+      const ageSelect = document.getElementById("age");
+      for (let i = 5; i <= 100; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        ageSelect.appendChild(opt);
+      }
 
-<footer class="py-5 bg-dark text-white">
-<div class="container py-4">
-<div class="row g-4">
-<div class="col-lg-4">
-<h5 class="fw-bold mb-3" style="color:var(--tayari-orange)">Contact Us</h5>
-<p class="text-white-50 small mb-2"><i class="fas fa-envelope me-2"></i>info@tayari.live</p>
-<p class="text-white-50 small mb-2"><i class="fas fa-phone me-2"></i>+254 715 349 834</p>
-<p class="text-white-50 small"><i class="fas fa-map-marker-alt me-2"></i>Diani, Ukunda, Kenya</p>
-</div>
-<div class="col-lg-4">
-<h5 class="fw-bold mb-3">Quick Links</h5>
-<ul class="list-unstyled">
-<li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none small">Home</a></li>
-<li class="mb-2"><a href="#registration" class="text-white-50 text-decoration-none small">Registration</a></li>
-<li class="mb-2"><a href="#info" class="text-white-50 text-decoration-none small">Need more info?</a></li>
-<li class="mb-2"><a href="#pricing" class="text-white-50 text-decoration-none small">Camp Pricing</a></li>
-</ul>
-</div>
-<div class="col-lg-4">
-<h5 class="fw-bold mb-3">Follow Us</h5>
-<div class="d-flex gap-3">
-<a href="#" class="text-white-50"><i class="fab fa-facebook-f fa-lg"></i></a>
-<a href="#" class="text-white-50"><i class="fab fa-instagram fa-lg"></i></a>
-<a href="#" class="text-white-50"><i class="fab fa-twitter fa-lg"></i></a>
-<a href="#" class="text-white-50"><i class="fab fa-youtube fa-lg"></i></a>
-<a href="#" class="text-white-50"><i class="fab fa-tiktok fa-lg"></i></a>
-<a href="#" class="text-white-50"><i class="fab fa-x-twitter fa-lg"></i></a>
-</div>
-</div>
-</div>
-<hr class="my-4 opacity-25">
-<p class="text-center text-white-50 small mb-0">© 2025 TAYARI.live. All rights reserved.</p>
-</div>
-</footer>
+      const signupForm = document.getElementById('signup-form');
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-a.addEventListener('click', e => {
-e.preventDefault();
-const target = document.querySelector(a.getAttribute('href'));
-if (target) {
-target.scrollIntoView({ behavior: 'smooth' });
-bootstrap.Collapse.getInstance(document.getElementById('nav'))?.hide();
-}
-});
-});
-</script>
+      signupForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const formData = {
+          "first-name": document.getElementById("first-name").value.trim(),
+          "last-name": document.getElementById("last-name").value.trim(),
+          "full-name": document.getElementById("first-name").value.trim() + " " + document.getElementById("last-name").value.trim(),
+          "email": document.getElementById("email").value.trim(),
+          "gender": document.getElementById("gender").value,
+          "age": document.getElementById("age").value,
+          "country": document.getElementById("country").value
+        };
+
+        if (!formData["first-name"] || !formData["last-name"] || !formData["email"] || !formData["country"] || !formData["gender"] || !formData["age"]) {
+          alert("Please fill in all the required fields.");
+          return;
+        }
+
+        const submitBtn = signupForm.querySelector('.submit-button');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Creating your account...';
+
+        try {
+          const response = await fetch("https://api.encharge.io/v1/hooks/30e9b27c-d08f-4055-8f8f-61c531ba3793", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+          });
+
+          if (!response.ok) {
+            throw new Error(`API error: ${response.statusText}`);
+          }
+
+          const modal = document.createElement('div');
+          modal.className = 'modal-overlay';
+          modal.innerHTML = `
+            <div class="modal-content">
+              <div class="success-icon">🎉</div>
+              <h3>Welcome to Tayari!</h3>
+              <p>Your account has been created successfully. We're redirecting you to your personalized learning dashboard.</p>
+              <div class="spinner"></div>
+            </div>
+          `;
+          document.body.appendChild(modal);
+
+          setTimeout(() => {
+            window.location.href = "https://app.tayari.live/login?redirectTo=%2F&login=1";
+          }, 2000);
+
+        } catch (err) {
+          console.error(err);
+          alert("Unable to submit the form. Please check your connection and try again.");
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Start Learning Free →';
+        }
+      });
+    })();
+  </script>
+
+  <script type="text/javascript" defer data-plerdy_code='1'>
+    var _protocol="https:"==document.location.protocol?"https://":"http://";
+    _site_hash_code = "51cf6fbc0a8f834098a66ddacdf913ef",_suid=27891, plerdyScript=document.createElement("script");
+    plerdyScript.setAttribute("defer",""),plerdyScript.dataset.plerdymainscript="plerdymainscript",
+    plerdyScript.src="https://d.plerdy.com/public/js/click/main.js?v="+Math.random();
+    var plerdymainscript=document.querySelector("[data-plerdymainscript='plerdymainscript']");
+    plerdymainscript&&plerdymainscript.parentNode.removeChild(plerdymainscript);
+    try{document.head.appendChild(plerdyScript)}catch(t){console.log(t,"unable add script tag")}
+  </script>
 </body>
 </html>
