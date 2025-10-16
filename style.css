@@ -85,62 +85,89 @@ html, body{overflow-x:hidden;max-width:100%}
   overflow:hidden;
   border-radius:20px;
   width:100%;
-  height:200px; /* Fixed height for all cards */
+  height:200px;
   transition:all 0.3s ease;
   cursor:pointer;
   justify-self: center;
-}
-.language-card img{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:0;
+  background:linear-gradient(135deg, #fff5f8, #f0f9ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:2rem;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 @media(max-width:767.98px){
   .language-card{
     border-radius:16px;
-    height:180px; /* Slightly smaller on mobile */
+    height:180px;
   }
 }
 @media(min-width:768px){
   .language-card{
-    height:250px; /* Larger height for tablets/desktops */
+    height:250px;
   }
 }
 .language-card:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:0 20px 40px rgba(0,0,0,.2);
-}
-.language-card::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.8) 100%);
-  z-index:1;
+  transform:translateY(-8px) scale(1.02) rotate(-1deg);
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 .language-card .content{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  padding:1rem;
   z-index:2;
-}
-@media(min-width:768px){
-  .language-card .content{padding:1.5rem}
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.75rem;
 }
 .language-card .content .fs-2 {
   font-size: 2.5rem !important;
-  margin-bottom: 0.5rem;
-  padding: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 @media(min-width:768px){
   .language-card .content .fs-2 {
     font-size: 3rem !important;
   }
+}
+.language-card h3 {
+  color: var(--brand-purple);
+  margin: 0;
+}
+.language-card.swahili {
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+}
+.language-card.swahili h3 {
+  color: white;
+}
+.language-card.yoruba {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.language-card.yoruba h3 {
+  color: white;
+}
+.language-card.hausa {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+.language-card.hausa h3 {
+  color: white;
+}
+.language-card.zulu {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+.language-card.zulu h3 {
+  color: white;
+}
+.language-card.krio {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+.language-card.krio h3 {
+  color: white;
+}
+.language-card.shona {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+.language-card.shona h3 {
+  color: white;
 }
 
 /* Floating Animation */
@@ -298,13 +325,13 @@ html, body{overflow-x:hidden;max-width:100%}
 /* Navbar Styling */
 .navbar{
   background:white;
-  transition:transform 0.3s ease; /* Smooth slide transition */
+  transition:transform 0.3s ease;
   position:sticky;
   top:0;
-  z-index:1030; /* Ensure navbar stays above content */
+  z-index:1030;
 }
 .navbar.hidden{
-  transform:translateY(-100%); /* Slide navbar out of view */
+  transform:translateY(-100%);
 }
 .navbar-brand{
   font-family:'Quicksand',sans-serif;
@@ -320,6 +347,7 @@ html, body{overflow-x:hidden;max-width:100%}
   color:#333;
   transition:all 0.3s ease;
   position:relative;
+  display:inline-block;
 }
 .nav-link:hover{
   color: var(--brand-blue);
@@ -328,15 +356,19 @@ html, body{overflow-x:hidden;max-width:100%}
   content:'';
   position:absolute;
   bottom:-5px;
-  left:50%;
+  left:0;
   width:0;
   height:3px;
   background:var(--brand-blue);
   transition:all 0.3s ease;
-  transform:translateX(-50%);
+}
+@media(max-width:991.98px){
+  .nav-link::after{
+    display:none;
+  }
 }
 .nav-link:hover::after{
-  width:80%;
+  width:100%;
 }
 
 /* Section Backgrounds */
@@ -396,6 +428,11 @@ html, body{overflow-x:hidden;max-width:100%}
   .video-wrapper{
     padding:8px;
     border-radius:32px;
+  }
+}
+@media(max-width:767.98px){
+  .video-wrapper .ratio {
+    --bs-aspect-ratio: 70%;
   }
 }
 
