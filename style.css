@@ -56,6 +56,15 @@ html, body{overflow-x:hidden;max-width:100%}
   box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
+.language-card .flag-emoji {
+  font-size: 3.5rem !important;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Individual language card backgrounds */
 .language-card.swahili {
   background: linear-gradient(135deg, #00A86B 0%, #008B5E 100%);
