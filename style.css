@@ -90,16 +90,29 @@ html, body{overflow-x:hidden;max-width:100%}
 }
 
 .language-card .flag-emoji {
-  font-size: 5rem !important;
+  font-size: 3.5rem !important;
   margin-bottom: 0.5rem;
   line-height: 1;
+  font-family: system-ui, -apple-system, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+
+@media(min-width:768px){
+  .language-card .flag-emoji {
+    font-size: 5rem !important;
+  }
 }
 
 .language-card h3 {
   color: white !important;
   margin: 0;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+}
+
+@media(min-width:768px){
+  .language-card h3 {
+    font-size: 1.75rem;
+  }
 }
 
 .badge-playful{
@@ -128,6 +141,20 @@ html, body{overflow-x:hidden;max-width:100%}
 .footer-link:hover {
   color: var(--brand-green) !important;
   text-decoration: underline;
+}
+
+/* Social media icons in footer */
+.footer-social {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-social:hover {
+  color: var(--brand-green) !important;
+  transform: translateY(-3px);
 }
 
 /* Other existing styles would go here - keeping your original CSS */
